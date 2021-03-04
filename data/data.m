@@ -1,19 +1,21 @@
-% sine wave represent bumpy road
+% signal represent bumps on the road
+time = (1:0.1:100)';
+wave = cos(2 * pi * 0.04 * time);
 
-freq = 0.01;
-amp = 0.01;
-time = 1:0.1:100;
-signal = -amp * cos(2 * pi * freq * time) + 1;
+signal = zeros(length(time),1);
 
-time = time';
-signal = signal';
+for i = 1:991
+    if time(i) > 11 && time(i) < 63 && wave(i) > 0
+        signal(i) = wave(i);
+    end
+end
 
 % Suspension system configuration
 
 m1 = 1000;  % mass of the vehicle
-m2 = 25;    % mass of the wheel
+m2 = 250;    % mass of the wheel
 
 k1 = 750;   % suspenstion spring stiffness
-k2 = 4000;  % tyre stiffness
+k2 = 25000;  % tyre stiffness
 
 b = 450;    % shock absorber dumping constant
