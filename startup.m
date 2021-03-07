@@ -4,6 +4,8 @@ run data/data.m
 % rum simulation
 sim('models/Suspension.slx')
 
+run models/Suspension.slx;
+
 % plot response
 subplot(2,1,1);
 plot(tout, response(:,1));

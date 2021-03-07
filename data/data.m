@@ -12,10 +12,10 @@ end
 
 % Suspension system configuration
 
-m1 = 1000;  % mass of the vehicle
+m1 = 1000;   % mass of the vehicle
 m2 = 250;    % mass of the wheel
 
-k1 = 750;   % suspenstion spring stiffness
+k1 = 750;    % suspenstion spring stiffness
 k2 = 25000;  % tyre stiffness
 
-b = 450;    % shock absorber dumping constant
+b = 450;     % shock absorber dumping constant
